@@ -9,9 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@remotion/player": "^4.0.447",
     "next": "16.2.3",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "remotion": "^4.0.447"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
