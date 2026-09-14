@@ -44,5 +44,5 @@
 
 ### Task 7: GitHub delivery
 - [x] Create isolated branch.
-- [ ] Commit reviewable source/docs.
-- [ ] Open PR without merging.
+- [x] Commit reviewable source/docs.
+- [x] Open PR without merging.
