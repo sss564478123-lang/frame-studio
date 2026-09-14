@@ -1,0 +1,12 @@
+{
+  "package_id": "writer-atelier-independent-studio",
+  "display_name": "작가공방 독립 스튜디오",
+  "core_skill_count": 40,
+  "optional_skill_count": 8,
+  "total_skill_count": 48,
+  "install_unit": "1 ZIP = 1 Skill = 1 SKILL.md",
+  "single_prose_writer": "novel-fiction-prose",
+  "recommended_first_install_count": 12,
+  "source_branch": "package/writer-atelier-independent-studio",
+  "release_date": "2026-09-15"
+}
