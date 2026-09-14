@@ -1,0 +1,20 @@
+{
+  "version":"52.0.0",
+  "top_regressions":["robotic-prose","phrase-echo","short-dialogue-overcompression","metronomic-dialogue"],
+  "scenarios":[
+    {"id":"R01","name":"과묵한 캐릭터의 짧은 대화","setup":"원래 말수가 적은 인물이 친한 동료와 긴장된 상황에서 대답한다.","risk_tags":["short-dialogue-overcompression","house-voice"],"must_preserve":["기능 있는 짧은 답","침묵 가능성","캐릭터 고유 직접성"],"failure_signals":["규칙 때문에 모든 답을 장문으로 팽창","중요 발화까지 한 줄로 잘라 메트로놈화"]},
+    {"id":"R02","name":"긴 고백","setup":"한 인물이 오래 숨긴 사실과 감정을 처음으로 털어놓는다.","risk_tags":["short-dialogue-overcompression","metronomic-dialogue"],"must_preserve":["발언권 지속","중간의 자기수정과 망설임","상대의 구체적 uptake"],"failure_signals":["한두 문장마다 상대에게 턴 넘김","모든 감정을 즉시 설명"]},
+    {"id":"R03","name":"친한 친구 농담","setup":"위험이 없는 일상 장면에서 친구들이 농담과 사소한 핀잔을 주고받는다.","risk_tags":["robotic-prose","house-voice"],"must_preserve":["가벼운 무목적성 일부","관계에서 나오는 리듬","완벽하지 않은 응답"],"failure_signals":["모든 대사가 플롯 기능을 세 개씩 수행","모든 인물이 같은 영리한 농담"]},
+    {"id":"R04","name":"격한 논쟁","setup":"서로 다른 목표와 오래된 불만이 충돌한다.","risk_tags":["metronomic-dialogue","phrase-echo"],"must_preserve":["말 끊기","같은 논점의 다른 반복","권력 변화"],"failure_signals":["균등한 한 줄 교대","반복을 전부 삭제해 감정 상승 소실"]},
+    {"id":"R05","name":"세 명 이상 대화","setup":"3~4명이 서로 다른 이해관계로 회의한다.","risk_tags":["metronomic-dialogue","house-voice"],"must_preserve":["발언권 비대칭","침묵하는 인물","동맹/반대의 변화"],"failure_signals":["A-B-C-A-B-C 순환","모든 화자 동일 문장 길이"]},
+    {"id":"R06","name":"필수 설명 장면","setup":"독자에게 필요한 정보를 인물들도 일부 공유하고 일부는 모른다.","risk_tags":["robotic-prose","over-explanation"],"must_preserve":["지식 비대칭","질문의 실제 동기","정보가 선택을 바꾸는 결과"],"failure_signals":["서로 아는 사실을 강의","설명 후 같은 뜻을 서술자가 재진술"]},
+    {"id":"R07","name":"전투 중 대사","setup":"시간 압박과 물리 위험 속에서 짧은 명령과 반응이 오간다.","risk_tags":["short-dialogue-overcompression","robotic-prose"],"must_preserve":["짧은 기능 대사","물리 상태 연속성","속도감"],"failure_signals":["짧은 대사를 억지로 확장","모든 동작 뒤 감정 해설"]},
+    {"id":"R08","name":"감정 사건 직후","setup":"큰 상실이나 배신 직후 즉각적인 후유증 장면이다.","risk_tags":["robotic-prose","phrase-echo"],"must_preserve":["감정 잔여","불완전한 사고","침묵과 회피"],"failure_signals":["감정을 한 문장 라벨로 반복","장면 전환과 동시에 정상 상태 복귀"]},
+    {"id":"R09","name":"정사 캐릭터 재현","setup":"원작 인물이 선택 판본의 특정 시점에서 등장한다.","risk_tags":["house-voice","canon-drift"],"must_preserve":["시점별 지식","관계별 호칭","현재 아크의 성격"],"failure_signals":["팬덤 밈 반복","후기 성장 상태를 과거 시점에 적용"]},
+    {"id":"R10","name":"조용한 이동 장면","setup":"두 인물이 목적지로 이동하며 큰 사건 없이 관계가 미세하게 움직인다.","risk_tags":["robotic-prose","over-explanation"],"must_preserve":["작은 상태 변화","선택적 감각","여백"],"failure_signals":["억지 반전/클리프행어","감각 카탈로그"]},
+    {"id":"R11","name":"부상·물건·비밀 이어쓰기","setup":"직전 회차의 부상, 소지품, 비밀 지식이 현재 장면 행동을 제한한다.","risk_tags":["continuity-drift","robotic-prose"],"must_preserve":["물리 제약","소유권","누가 무엇을 아는지"],"failure_signals":["장면 전환으로 상태 리셋","POV가 타인의 비밀을 자동 인지"]},
+    {"id":"R12","name":"표현 반복 스트레스","setup":"의도적 핵심어 반복과 비의도적 문장 골격 반복이 함께 있는 본문.","risk_tags":["phrase-echo","robotic-prose"],"must_preserve":["의도적 모티프 반복","캐릭터 고유 반복"],"failure_signals":["모든 반복 자동 제거","같은 골격은 남겨둔 채 단어만 동의어 치환"]},
+    {"id":"R13","name":"친밀한 관계에서만 길어지는 화자","setup":"평소 과묵한 인물이 특정 상대에게만 길게 설명한다.","risk_tags":["house-voice","short-dialogue-overcompression"],"must_preserve":["관계별 말투 변화","평소와 다른 장문이지만 캐릭터다운 이유"],"failure_signals":["평균 말투 규칙으로 장문 삭제","모든 상대에게 같은 장문 성향 전파"]},
+    {"id":"R14","name":"수정 과잉 회귀","setup":"이미 잘 작동하는 후보가 여러 reviser를 거친 뒤 평준화될 위험을 본다.","risk_tags":["robotic-prose","phrase-echo","house-voice"],"must_preserve":["평범한 기능 문장","의도된 비대칭","고유 리듬"],"failure_signals":["문장 전부 세련되게 교체","모든 문단 비슷한 길이로 정리"]}
+  ]
+}

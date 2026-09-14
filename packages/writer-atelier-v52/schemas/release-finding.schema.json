@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","title":"Source-Blind Release Finding","type":"object",
+  "required":["schema_version","span_ref","severity","category","reader_effect","minimal_repair","is_blocking"],
+  "properties":{"schema_version":{"type":"string"},"span_ref":{"type":"string"},"severity":{"enum":["high","medium","low"]},"category":{"enum":["robotic-prose","phrase-echo","house-voice","metronomic-dialogue","over-explanation","pacing","clarity","other"]},"reader_effect":{"type":"string"},"minimal_repair":{"type":"string"},"evidence":{"type":"array","items":{"type":"string"}},"is_blocking":{"type":"boolean"}}
+}
