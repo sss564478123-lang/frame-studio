@@ -1,0 +1,18 @@
+{
+  "package_id": "writer-atelier-sovereign-studio",
+  "name": "Writer Atelier Sovereign Studio",
+  "display_name": "작가공방 소버린 스튜디오",
+  "language": "ko-KR",
+  "package_type": "modular-fiction-authoring-and-editorial-system",
+  "skill_count": 50,
+  "agent_count": 18,
+  "entry_skill": "novel-router",
+  "single_prose_writer": true,
+  "prose_writer_skill": "novel-fiction-prose",
+  "editorial_council_skill": "novel-editorial-council",
+  "project_instructions": "PROJECT_INSTRUCTIONS_KO.md",
+  "regression_scenarios": 60,
+  "github_research_snapshots": 12,
+  "source_package": "Writer Atelier Master Guild",
+  "release_date": "2026-09-15"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Opposition Response",
+  "type": "object",
+  "required": ["actor", "goal", "known_information", "resources", "next_strategy"],
+  "properties": {
+    "actor": {"type": "string"},
+    "goal": {"type": "string"},
+    "known_information": {"type": "array", "items": {"type": "string"}},
+    "misbeliefs": {"type": "array", "items": {"type": "string"}},
+    "resources": {"type": "array", "items": {"type": "string"}},
+    "losses": {"type": "array", "items": {"type": "string"}},
+    "next_strategy": {"type": "string"},
+    "information_source": {"type": "array", "items": {"type": "string"}}
+  }
+}

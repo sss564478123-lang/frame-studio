@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Character Distance Matrix",
+  "type": "object",
+  "required": ["characters", "pairwise_differences"],
+  "properties": {
+    "characters": {"type": "array", "items": {"type": "string"}},
+    "pairwise_differences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["a", "b", "differences"],
+        "properties": {
+          "a": {"type": "string"},
+          "b": {"type": "string"},
+          "differences": {"type": "array", "items": {"type": "string"}},
+          "intentional_overlap": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

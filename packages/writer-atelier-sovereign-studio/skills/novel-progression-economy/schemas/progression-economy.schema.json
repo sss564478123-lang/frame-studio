@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Progression Economy",
+  "type": "object",
+  "required": ["gain", "proof", "cost", "obsolete_problems", "new_problems"],
+  "properties": {
+    "gain": {"type": "string"},
+    "proof": {"type": "string"},
+    "cost": {"type": "array", "items": {"type": "string"}},
+    "obsolete_problems": {"type": "array", "items": {"type": "string"}},
+    "new_problems": {"type": "array", "items": {"type": "string"}},
+    "external_revaluation": {"type": "array", "items": {"type": "string"}},
+    "reward_currency": {"type": "string"}
+  }
+}
