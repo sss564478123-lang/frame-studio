@@ -1,0 +1,48 @@
+{
+  "package_id": "writer-atelier-v52",
+  "display_name": "작가공방 V52 — 독립 전문가 소설 스킬 패키지",
+  "version": "52.0.0",
+  "release_date": "2026-09-15",
+  "language": "ko-KR",
+  "package_type": "modular-agent-skill-bundle",
+  "skill_count": 15,
+  "router_skill": "novel-router",
+  "single_prose_writer": true,
+  "prose_writer_skill": "novel-fiction-prose",
+  "writer_critic_separation": true,
+  "automatic_literary_pass_fail": false,
+  "default_output": [
+    "본문 전 자료",
+    "순수 소설 본문",
+    "본문 후 자료"
+  ],
+  "shared_engines": [
+    "scene-momentum",
+    "dialogue-fingerprint",
+    "revision-budget",
+    "release-finding",
+    "phrase-echo-static-analysis"
+  ],
+  "skills": [
+    "novel-canon-critic",
+    "novel-canon-research",
+    "novel-character-performance",
+    "novel-continuity-critic",
+    "novel-dialogue-craft",
+    "novel-dialogue-reviser",
+    "novel-dossier-output",
+    "novel-episode-release",
+    "novel-episode-state",
+    "novel-fiction-prose",
+    "novel-mature-romance",
+    "novel-original-fiction",
+    "novel-prose-reviser",
+    "novel-router",
+    "novel-scene-architecture"
+  ],
+  "project_instructions": "PROJECT_INSTRUCTIONS_KO.md",
+  "validator": "evals/validate_package.py",
+  "static_analyzer": "scripts/analyze_passage.py",
+  "runtime_flow": "RUNTIME_FLOW_KO.md",
+  "source_notes": "SOURCE_NOTES_KO.md"
+}

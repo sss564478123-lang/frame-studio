@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","title":"Scene Momentum Memory","type":"object",
+  "required":["schema_version","scene_id","entry_state","active_pressure","last_meaningful_choice","deltas","carry_forward"],
+  "properties":{"schema_version":{"type":"string"},"scene_id":{"type":"string"},"entry_state":{"type":"array","items":{"type":"string"}},"active_pressure":{"type":"array","items":{"type":"string"}},"unresolved_actions":{"type":"array","items":{"type":"string"}},"last_meaningful_choice":{"type":"string"},"deltas":{"type":"object","required":["information","relationship","physical","emotional","power"],"properties":{"information":{"type":"array","items":{"type":"string"}},"relationship":{"type":"array","items":{"type":"string"}},"physical":{"type":"array","items":{"type":"string"}},"emotional":{"type":"array","items":{"type":"string"}},"power":{"type":"array","items":{"type":"string"}}}},"exit_vector":{"type":"array","items":{"type":"string"}},"carry_forward":{"type":"array","items":{"type":"string"}},"provenance":{"type":"array","items":{"type":"string"}}}
+}
