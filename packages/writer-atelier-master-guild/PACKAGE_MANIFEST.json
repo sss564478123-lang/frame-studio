@@ -1,0 +1,11 @@
+{
+  "name": "Writer Atelier Master Guild",
+  "display_name": "작가공방 마스터 길드",
+  "skill_count": 30,
+  "agent_count": 10,
+  "single_writer": "novel-fiction-prose",
+  "entry_skill": "novel-router",
+  "editorial_council_skill": "novel-editorial-council",
+  "project_instructions": "PROJECT_INSTRUCTIONS_KO.md",
+  "regression_scenarios": 40
+}
