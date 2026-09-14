@@ -32,6 +32,11 @@ else:
             if slug not in rt: errors.append(f'router missing {slug}')
     for q in ['README_KO.md','INSTALL_KO.md','PROJECT_INSTRUCTIONS_KO.md','SKILL_CATALOG_KO.md','evals/regression-scenarios.md']:
         if not (root/q).exists(): errors.append(f'missing {q}')
+    project_path=root/'PROJECT_INSTRUCTIONS_KO.md'
+    if project_path.exists():
+        project_len=len(project_path.read_text(encoding='utf-8'))
+        if not 7000 <= project_len <= 8000:
+            errors.append(f'project instructions chars={project_len} expected 7000-8000')
 print('PASS' if not errors else 'FAIL')
 for e in errors: print('-',e)
 sys.exit(1 if errors else 0)
