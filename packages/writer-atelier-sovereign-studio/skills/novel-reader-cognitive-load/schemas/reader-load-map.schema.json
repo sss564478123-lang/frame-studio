@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reader Load Map",
+  "type": "object",
+  "required": ["segment", "new_items", "must_track_now"],
+  "properties": {
+    "segment": {"type": "string"},
+    "new_items": {"type": "array", "items": {"type": "string"}},
+    "must_track_now": {"type": "array", "items": {"type": "string"}},
+    "can_delay": {"type": "array", "items": {"type": "string"}},
+    "confusion_risks": {"type": "array", "items": {"type": "string"}},
+    "reinforcement_channels": {"type": "array", "items": {"type": "string"}}
+  }
+}

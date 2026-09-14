@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ending Debt Ledger",
+  "type": "object",
+  "required": ["debts"],
+  "properties": {
+    "debts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["central-question", "character-choice", "relationship", "promise", "world", "cost", "theme"]},
+          "status": {"enum": ["open", "ready", "paid", "intentionally-open"]},
+          "evidence": {"type": "array", "items": {"type": "string"}},
+          "planned_resolution": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

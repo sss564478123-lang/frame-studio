@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mystery Clue Ledger",
+  "type": "object",
+  "required": ["truths"],
+  "properties": {
+    "truths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["truth", "clues"],
+        "properties": {
+          "truth": {"type": "string"},
+          "clues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["clue", "first_seen", "apparent_meaning", "true_meaning"],
+              "properties": {
+                "clue": {"type": "string"},
+                "first_seen": {"type": "string"},
+                "who_can_access": {"type": "array", "items": {"type": "string"}},
+                "apparent_meaning": {"type": "string"},
+                "true_meaning": {"type": "string"},
+                "red_herring_relation": {"type": ["string", "null"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

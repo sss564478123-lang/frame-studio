@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sensory Anchor Map",
+  "type": "object",
+  "required": ["pov", "body_state", "space_constraints"],
+  "properties": {
+    "pov": {"type": "string"},
+    "body_state": {"type": "array", "items": {"type": "string"}},
+    "space_constraints": {"type": "array", "items": {"type": "string"}},
+    "selected_sensory_inputs": {"type": "array", "items": {"type": "string"}},
+    "action_effects": {"type": "array", "items": {"type": "string"}},
+    "decorative_only_candidates": {"type": "array", "items": {"type": "string"}}
+  }
+}

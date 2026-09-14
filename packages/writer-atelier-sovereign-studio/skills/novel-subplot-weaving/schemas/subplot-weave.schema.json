@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Subplot Weave",
+  "type": "object",
+  "required": ["threads"],
+  "properties": {
+    "threads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "question", "owner", "next_pressure", "exit_condition"],
+        "properties": {
+          "id": {"type": "string"},
+          "question": {"type": "string"},
+          "owner": {"type": "string"},
+          "resource": {"type": ["string", "null"]},
+          "next_pressure": {"type": "string"},
+          "crossings": {"type": "array", "items": {"type": "string"}},
+          "payoff": {"type": ["string", "null"]},
+          "exit_condition": {"type": "string"}
+        }
+      }
+    }
+  }
+}

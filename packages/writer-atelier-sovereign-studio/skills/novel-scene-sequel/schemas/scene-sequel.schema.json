@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scene Sequel State",
+  "type": "object",
+  "required": ["scene_goal", "turn", "residue", "next_decision"],
+  "properties": {
+    "scene_goal": {"type": "string"},
+    "opposition": {"type": "array", "items": {"type": "string"}},
+    "turn": {"type": "string"},
+    "residue": {"type": "array", "items": {"type": "string"}},
+    "dilemma": {"type": ["string", "null"]},
+    "next_decision": {"type": "string"}
+  }
+}
