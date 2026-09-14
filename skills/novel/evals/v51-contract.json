@@ -1,0 +1,13 @@
+{
+  "version": "51.0.0",
+  "visible_skill": "소설",
+  "core_skill_count": 14,
+  "writer_critic_separation": true,
+  "single_prose_writer": true,
+  "project_instructions": true,
+  "default_serial_output": ["PRE", "PURE_BODY", "POST"],
+  "no_draft_when_canon_materially_unset": true,
+  "pure_body_meta_allowed": false,
+  "literary_quality_requires_source_blind_eval": true,
+  "release_regressions": ["roboticness", "phrase-template-repetition", "short-pingpong", "house-voice-collapse"]
+}
