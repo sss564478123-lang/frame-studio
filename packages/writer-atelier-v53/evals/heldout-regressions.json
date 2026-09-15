@@ -1,0 +1,25 @@
+{
+  "version": "53.0.0",
+  "top_regressions": [
+    "robotic-prose",
+    "phrase-echo",
+    "short-dialogue-overcompression",
+    "metronomic-dialogue"
+  ],
+  "scenarios": [
+    {"id":"R01","name":"과묵한 캐릭터의 짧은 대화","setup":"원래 말수가 적은 인물이 친한 동료와 긴장된 상황에서 대답한다.","risk_tags":["short-dialogue-overcompression","house-voice"],"must_preserve":["기능 있는 짧은 답","침묵 가능성","캐릭터 고유 직접성"],"failure_signals":["규칙 때문에 모든 답을 장문으로 팽창","중요 발화까지 한 줄로 잘라 메트로놈화"]},
+    {"id":"R02","name":"긴 고백","setup":"한 인물이 오래 숨긴 사실과 감정을 처음으로 털어놓는다.","risk_tags":["short-dialogue-overcompression","metronomic-dialogue"],"must_preserve":["발언권 지속","중간의 자기수정과 망설임","상대의 구체적 uptake"],"failure_signals":["한두 문장마다 상대에게 턴 넘김","모든 감정을 즉시 설명"]},
+    {"id":"R03","name":"친구끼리 농담","setup":"친한 친구 둘이 긴장 직후 가벼운 농담으로 분위기를 풀지만 미해결 문제가 남아 있다.","risk_tags":["robotic-prose","house-voice"],"must_preserve":["친밀도 기반 생략","가벼운 말의 이면","관계 특유의 속도"],"failure_signals":["모든 농담 뒤 감정 해설","행동비트 과다"]},
+    {"id":"R04","name":"격한 논쟁","setup":"두 인물이 같은 사건을 다르게 해석하고 오래된 불만이 튀어나온다.","risk_tags":["metronomic-dialogue","phrase-echo"],"must_preserve":["말 끊김 가능","주제 이탈과 복귀","권력 변동"],"failure_signals":["균등 길이 교대","모든 반박이 논리적으로 완벽"]},
+    {"id":"R05","name":"세 명 이상 대화","setup":"세 명이 서로 다른 정보와 목표를 가진 채 결정해야 한다.","risk_tags":["house-voice","speaker-confusion"],"must_preserve":["화자별 목적","침묵하는 인물도 상태 변화 가능","비대칭 참여"],"failure_signals":["라운드로빈식 한 줄씩 발언","모두 같은 어휘"]},
+    {"id":"R06","name":"필수 설명 장면","setup":"독자에게 중요한 정보를 알려야 하지만 인물들은 일부를 이미 알고 있다.","risk_tags":["exposition-dump","robotic-prose"],"must_preserve":["지식 비대칭","질문 이유","설명 중 관계/목표 변화"],"failure_signals":["서로 아는 사실 강의","정보만 전달하고 장면 변화 없음"]},
+    {"id":"R07","name":"전투 중 대사","setup":"시간 압력이 큰 물리적 충돌에서 필요한 대사만 오간다.","risk_tags":["dialogue-overexpansion","action-beat-fragmentation"],"must_preserve":["긴급성","짧은 명령","물리 상태"],"failure_signals":["짧은 대사를 무조건 늘림","모든 대사 사이 장식 행동"]},
+    {"id":"R08","name":"감정 사건 직후","setup":"큰 상실이나 배신 직후 인물들이 즉시 대화해야 한다.","risk_tags":["emotion-explanation","house-voice"],"must_preserve":["반응의 비대칭","말 못함","감정 잔여"],"failure_signals":["모두 자기 감정을 정확히 설명","깔끔한 화해"]},
+    {"id":"R09","name":"정사 캐릭터 재현","setup":"팬픽/AU에서 원작 인물이 특정 시기의 관계와 지식 한계 속에서 행동한다.","risk_tags":["ooc","fanon-promotion"],"must_preserve":["판본/시기","호칭","지식 방화벽"],"failure_signals":["팬덤 밈을 영구 특성화","미래 지식 누출"]},
+    {"id":"R10","name":"조용한 이동/식사 장면","setup":"큰 사건 없이 인물들이 이동하거나 식사하지만 관계의 미세한 변화가 있다.","risk_tags":["forced-hook","empty-scene"],"must_preserve":["조용함","작은 상태 변화","일상 리듬"],"failure_signals":["억지 반전","아무 변화 없이 정보만 나열"]},
+    {"id":"R11","name":"부상·물건·비밀 이어쓰기","setup":"직전 회차의 상처, 소지품, 비밀, 미완 질문이 다음 장면에 영향을 준다.","risk_tags":["continuity","state-reset"],"must_preserve":["부상","소유권","누가 무엇을 아는지"],"failure_signals":["장면 전환으로 상태 초기화","미승인 초안 상태 상속"]},
+    {"id":"R12","name":"반복 표현 스트레스","setup":"한 장면에서 비슷한 접속과 문장 시작이 반복될 위험이 있다.","risk_tags":["phrase-echo","robotic-prose"],"must_preserve":["의도된 모티프","캐릭터 말버릇의 기능"],"failure_signals":["동일 골격 군집","전역 금지어 치환만 수행"]},
+    {"id":"R13","name":"특정 관계에서만 길어지는 과묵 캐릭터","setup":"평소 과묵한 인물이 신뢰하는 한 사람에게만 비교적 길게 설명한다.","risk_tags":["voice-caricature","dialogue-length-quota"],"must_preserve":["관계별 말투 변화","평소 과묵함과의 양립"],"failure_signals":["항상 짧게만 말하게 강제","모든 상대에게 같은 장문"]},
+    {"id":"R14","name":"과개고 회귀","setup":"이미 작동하는 초고를 여러 검수자가 연속으로 수정하려 한다.","risk_tags":["house-voice-collapse","overrevision"],"must_preserve":["작동하는 평범한 문장","고유 리듬","국소 수정"],"failure_signals":["전체 재작성 반복","모든 문장 균질화"]}
+  ]
+}

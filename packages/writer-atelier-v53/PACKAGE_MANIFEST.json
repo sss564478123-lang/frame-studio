@@ -1,0 +1,24 @@
+{
+  "package": "writer-atelier-v53",
+  "version": "53.0.0",
+  "language": "ko-KR",
+  "format": "agent-skills-compatible-bundle",
+  "skills_count": 15,
+  "single_prose_writer": "novel-fiction-prose",
+  "router": "novel-router",
+  "project_instructions": "PROJECT_INSTRUCTIONS_KO.md",
+  "project_instruction_chars": 7765,
+  "principles": [
+    "progressive-disclosure",
+    "self-contained-skills",
+    "writer-critic-separation",
+    "canon-au-separation",
+    "accepted-prose-over-derived-ledger",
+    "source-blind-release"
+  ],
+  "distribution": {
+    "individual_skill_zips": "dist/individual-skills",
+    "all_skills_zip": "dist/Writer_Atelier_V53_All_Skills.zip"
+  },
+  "official_spec": "https://agentskills.io/specification"
+}
